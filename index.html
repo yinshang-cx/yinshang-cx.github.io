@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naval Ravikant 智慧体系可视化解析</title>
+    <link href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary: #2A4365;
+            --secondary: #C6A87D;
+            --accent: #4A5568;
+        }
+        .dark {
+            --primary: #C6A87D;
+            --secondary: #2A4365;
+            --accent: #CBD5E0;
+            background-color: #1A202C;
+            color: #E2E8F0;
+        }
+        .font-serif { font-family: 'Noto Serif SC', serif; }
+        .font-sans { font-family: 'Noto Sans SC', sans-serif; }
+        .gradient-text { background: linear-gradient(45deg, #C6A87D, #2A4365); -webkit-background-clip: text; color: transparent; }
+    </style>
+</head>
+<body class="font-sans transition-colors duration-300">
+    <!-- 模式切换按钮 -->
+    <button id="themeToggle" class="fixed top-4 right-4 p-2 rounded-full bg-opacity-20 backdrop-blur">
+        <i class="fas fa-moon text-2xl text-secondary"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 gradient-text">
+                纳瓦尔·拉维坎特的智慧体系
+            </h1>
+            <p class="text-xl md:text-2xl text-accent max-w-3xl mx-auto mb-8">
+                「财富不是结果，而是创造价值的能力。幸福不是目标，而是需要培养的技能。」
+            </p>
+        </div>
+    </header>
+
+    <!-- 核心概念图谱 -->
+    <section class="py-20 px-4 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">
+                <i class="fas fa-brain mr-3"></i>思想体系概念图谱
+            </h2>
+            <div class="mermaid bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl">
+                graph TD
+                    A[财富创造] --> B(特定知识)
+                    A --> C(杠杆效应)
+                    A --> D(承担责任)
+                    E[幸福哲学] --> F(接受现实)
+                    E --> G(活在当下)
+                    E --> H(自我进化)
+                    I[智慧体系] --> A
+                    I --> E
+                    I --> J(理性思考)
+                    style A fill:#C6A87D,color:#1A202C
+                    style E fill:#2A4365,color:#FFF
+                    style I fill:#4A5568,color:#FFF
+            </div>
+        </div>
+    </section>
+
+    <!-- 关键思想模块 -->
+    <section class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
+                <i class="fas fa-coins text-4xl text-secondary mb-6"></i>
+                <h3 class="text-2xl font-serif font-bold mb-4">财富创造原则</h3>
+                <ul class="space-y-3 text-accent">
+                    <li>▪ 追求特定知识</li>
+                    <li>▪ 善用杠杆效应</li>
+                    <li>▪ 建立资产系统</li>
+                </ul>
+            </div>
+            <!-- 其他模块类似结构 -->
+        </div>
+    </section>
+
+    <!-- 书籍推荐 -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">
+                <i class="fas fa-book-open mr-3"></i>延伸阅读
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                    <h4 class="font-serif font-bold mb-2">《穷查理宝典》</h4>
+                    <p class="text-sm text-accent">查理·芒格的多元思维模型</p>
+                </div>
+                <!-- 其他书籍推荐 -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 主题切换逻辑
+        const themeToggle = document.getElementById('themeToggle');
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+        themeToggle.addEventListener('click', toggleTheme);
+
+        // Mermaid初始化
+        mermaid.initialize({
+            startOnLoad:true,
+            theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default',
+            securityLevel: 'loose'
+        });
+    </script>
+</body>
+</html>
