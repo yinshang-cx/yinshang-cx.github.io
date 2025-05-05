@@ -3,117 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naval Ravikant 智慧体系可视化解析</title>
+    <title>给[女孩名字]的特别心意</title>
     <link href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.staticfile.org/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
     <style>
         :root {
-            --primary: #2A4365;
-            --secondary: #C6A87D;
-            --accent: #4A5568;
+            --primary: #DB2777; /* 主粉色调 */
+            --secondary: #F472B6; /* 次粉色调 */
+            --accent: #9D174D; /* 强调色 */
         }
         .dark {
-            --primary: #C6A87D;
-            --secondary: #2A4365;
-            --accent: #CBD5E0;
-            background-color: #1A202C;
-            color: #E2E8F0;
+            --primary: #F472B6;
+            --secondary: #DB2777;
+            --accent: #FBCFE8;
+            background-color: #1F2937;
         }
         .font-serif { font-family: 'Noto Serif SC', serif; }
         .font-sans { font-family: 'Noto Sans SC', sans-serif; }
-        .gradient-text { background: linear-gradient(45deg, #C6A87D, #2A4365); -webkit-background-clip: text; color: transparent; }
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body class="font-sans transition-colors duration-300">
-    <!-- 模式切换按钮 -->
-    <button id="themeToggle" class="fixed top-4 right-4 p-2 rounded-full bg-opacity-20 backdrop-blur">
-        <i class="fas fa-moon text-2xl text-secondary"></i>
+    <!-- 主题切换 -->
+    <button id="themeToggle" class="fixed top-4 right-4 p-3 rounded-full bg-white/20 backdrop-blur">
+        <i class="fas fa-heart text-2xl text-secondary"></i>
     </button>
 
-    <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"></div>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 gradient-text">
-                纳瓦尔·拉维坎特的智慧体系
+    <!-- Hero模块 -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
+        <div class="relative z-10 text-center px-4 space-y-8">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white">
+                <span class="heartbeat inline-block">❤️</span><br>
+                致最特别的你
             </h1>
-            <p class="text-xl md:text-2xl text-accent max-w-3xl mx-auto mb-8">
-                「财富不是结果，而是创造价值的能力。幸福不是目标，而是需要培养的技能。」
-            </p>
+            <div class="max-w-2xl mx-auto bg-white/90 dark:bg-gray-800/90 p-8 rounded-2xl shadow-xl">
+                <p class="text-xl md:text-2xl text-accent leading-relaxed">
+                    "从第一次见到你的那天起，我的世界就开始闪耀不一样的光芒。<br>
+                    你的笑容是我每天最期待的风景..."
+                </p>
+            </div>
         </div>
     </header>
 
-    <!-- 核心概念图谱 -->
-    <section class="py-20 px-4 bg-opacity-50">
-        <div class="max-w-7xl mx-auto">
+    <!-- 时间轴 -->
+    <section class="py-20 px-4 bg-primary/5">
+        <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-serif font-bold mb-12 text-center">
-                <i class="fas fa-brain mr-3"></i>思想体系概念图谱
+                <i class="fas fa-heart mr-3"></i>我们的故事
             </h2>
-            <div class="mermaid bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl">
-                graph TD
-                    A[财富创造] --> B(特定知识)
-                    A --> C(杠杆效应)
-                    A --> D(承担责任)
-                    E[幸福哲学] --> F(接受现实)
-                    E --> G(活在当下)
-                    E --> H(自我进化)
-                    I[智慧体系] --> A
-                    I --> E
-                    I --> J(理性思考)
-                    style A fill:#C6A87D,color:#1A202C
-                    style E fill:#2A4365,color:#FFF
-                    style I fill:#4A5568,color:#FFF
+            <div class="mermaid bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                %%{init: {'theme':'base'}}%%
+                timeline
+                    title 爱情时间轴
+                    2023.03.12 : 初次相遇
+                    2023.05.20 : 第一次约会
+                    2023.08.15 : 海边看日出
+                    2023.12.24 : 圣诞夜告白
+                    2024.02.14 : 第一个情人节
             </div>
         </div>
     </section>
 
-    <!-- 关键思想模块 -->
-    <section class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+    <!-- 告白理由 -->
+    <section class="py-20">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
-                <i class="fas fa-coins text-4xl text-secondary mb-6"></i>
-                <h3 class="text-2xl font-serif font-bold mb-4">财富创造原则</h3>
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg transition hover:-translate-y-2">
+                <i class="fas fa-smile-beam text-4xl text-secondary mb-6"></i>
+                <h3 class="text-2xl font-serif font-bold mb-4">爱上你的理由</h3>
                 <ul class="space-y-3 text-accent">
-                    <li>▪ 追求特定知识</li>
-                    <li>▪ 善用杠杆效应</li>
-                    <li>▪ 建立资产系统</li>
+                    <li>✨ 阳光般的笑容</li>
+                    <li>🎶 温柔的声音</li>
+                    <li>💖 善良的内心</li>
                 </ul>
             </div>
-            <!-- 其他模块类似结构 -->
+            <!-- 其他卡片... -->
         </div>
     </section>
 
-    <!-- 书籍推荐 -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- 互动相册 -->
+    <section class="py-20 bg-gradient-to-tr from-primary/10 to-secondary/10">
+        <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-3xl font-serif font-bold mb-12 text-center">
-                <i class="fas fa-book-open mr-3"></i>延伸阅读
+                <i class="fas fa-camera-retro mr-3"></i>记忆碎片
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-                    <h4 class="font-serif font-bold mb-2">《穷查理宝典》</h4>
-                    <p class="text-sm text-accent">查理·芒格的多元思维模型</p>
-                </div>
-                <!-- 其他书籍推荐 -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="aspect-square bg-cover rounded-xl shadow-lg transition hover:scale-105" 
+                     style="background-image:url('placeholder-1.jpg')"></div>
+                <!-- 更多图片占位符 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 最终告白 -->
+    <section class="min-h-screen flex items-center justify-center bg-primary/5">
+        <div class="text-center max-w-2xl px-4">
+            <div class="heartbeat inline-block text-6xl mb-8">💍</div>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">
+                你愿意让我们的故事<br>
+                <span class="text-secondary">永远写下去吗？</span>
+            </h2>
+            <div class="space-x-4 mt-8">
+                <button class="px-8 py-3 bg-secondary text-white rounded-full hover:bg-primary transition">
+                    ❤️ 我愿意
+                </button>
             </div>
         </div>
     </section>
 
     <script>
-        // 主题切换逻辑
+        // 主题切换
         const themeToggle = document.getElementById('themeToggle');
-        function toggleTheme() {
+        themeToggle.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
-        }
-        themeToggle.addEventListener('click', toggleTheme);
+            themeToggle.querySelector('i').classList.toggle('fa-moon');
+            themeToggle.querySelector('i').classList.toggle('fa-heart');
+        });
 
         // Mermaid初始化
         mermaid.initialize({
-            startOnLoad:true,
+            startOnLoad: true,
             theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default',
             securityLevel: 'loose'
+        });
+
+        // 按钮互动
+        document.querySelector('button').addEventListener('click', () => {
+            const fireworks = new Array(20).fill('🎇').join('');
+            alert(`${fireworks}\n\n我知道你会答应的！\n让我们开始新的篇章吧！❤️\n${fireworks}`);
         });
     </script>
 </body>
